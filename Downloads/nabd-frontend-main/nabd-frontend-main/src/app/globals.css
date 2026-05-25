@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #5d7fb1;
+  --primary-dark: #4a658d;
+  --secondary: #E8475F;
+  --accent-teal: #38b2ac;
+  --background-dark: #15181d;
+  --surface-dark: #1e2329;
+  --card-dark: #21252c;
+  --border-dark: #2e343d;
+  --text-secondary: #a2abb9;
+}
+
+@layer base {
+  html,
+  body {
+    @apply max-w-[100vw] overflow-x-hidden;
+  }
+
+  body {
+    color: #ededed;
+    background: var(--background-dark);
+    @apply antialiased;
+  }
+
+  * {
+    @apply box-border p-0 m-0;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Chat scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
